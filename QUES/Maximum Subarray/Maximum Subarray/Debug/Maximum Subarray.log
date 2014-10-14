@@ -1,4 +1,4 @@
-﻿生成启动时间为 2014/10/14 23:40:26。
+﻿生成启动时间为 2014/10/15 1:52:34。
      1>项目“D:\Workspace\GitHub\Algo\QUES\Maximum Subarray\Maximum Subarray\Maximum Subarray.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\Maximum Subarray.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -17,4 +17,4 @@
 
 生成成功。
 
-已用时间 00:00:00.89
+已用时间 00:00:02.70

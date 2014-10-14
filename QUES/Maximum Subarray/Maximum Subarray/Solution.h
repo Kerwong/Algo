@@ -42,24 +42,77 @@ public:
 		return;
     }*/
 
-	//
+	// ·ÖÖÎ·¨ Divide and Conquer
 	int maxSummary_2(int A[], int n) {
-		return maxSumSub(A, n);
+		int low, high, max;
+		findMaxSub(A, 0, n-1, low, high, max);
+		std::cout<<low<<" "<<high<<" "<<max<<std::endl;
+		return 0;
 	}
 
 private:
-	/*int maxSumSub(int A[], int n){
-		if(n == 1) {
-			return A[0];
+
+	void findMaxSub(int A[], int left, int right, int& low, int& high, int& max){
+		if(left == right) {
+			low = left;
+			high = right;
+			max = A[left];
 		}
 		else {
-			if(A[n-1] >= 0)
-				return max(A[n-1] + maxSumSub(A, n-1), A[n-1]);
-			else {
-				return max(maxSumSub(A, n-1), A[n-1]);
+			int mid = (left+right)/2;
+			int llow, lhigh, lmax;
+			findMaxSub(A, left, mid, llow, lhigh, lmax);
+
+			int rlow, rhigh, rmax;
+			findMaxSub(A, mid+1, right, rlow, rhigh, rmax);
+
+			int clow, chigh, cmax;
+			findMaxCrossSub(A, left, mid, right, clow, chigh, cmax);
+
+			if(lmax >= rmax && lmax >= cmax){
+				low = llow;
+				high = lhigh;
+				max = lmax;
+			} else if(rmax >= lmax && rmax >= cmax){
+				low = rlow;
+				high = rhigh;
+				max = rmax;
+			} else {
+				low = clow;
+				high = chigh;
+				max = cmax;
 			}
 		}
-	}*/
+	}
+
+	// Find the Max cross left subarray and right subarray
+	void findMaxCrossSub(int A[], int left, int mid, int right, int& low, int& high, int& max){
+		if(left == right){
+			low = left;
+			high = right;
+			max = A[left];
+		} else {
+			int lmax = MINIMUM;
+			int sum = 0;
+			for(int i = mid; i >=left; i--){
+				sum += A[i];
+				if(sum > lmax){
+					lmax = sum;
+					low = i;
+				}
+			}
+			sum = 0;
+			int rmax = MINIMUM;
+			for(int i = mid+1; i <= right; i++){
+				sum += A[i];
+				if(sum > rmax){
+					rmax = sum;
+					high = i;
+				}
+			}
+			max = lmax + rmax;
+		}
+	}
 
 	/*sMax maxSumSub(int A[], sMax info){
 		if(info.left == info.right){
