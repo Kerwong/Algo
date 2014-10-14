@@ -4,6 +4,14 @@
 #include <iostream>
 #include <Windows.h>
 
+#define MINIMUM -65536
+
+typedef struct {
+	int left;
+	int right;
+	int max;
+} sMax;
+
 class Solution {
 public:
     int maxProduct(int A[], int n) {
@@ -11,33 +19,28 @@ public:
     }
 
 	// Çî¾Ù£¬¸´ÔÓ¶È O(N^2)
-	int maxSummary_1(int A[], int n) {
-		
-		int** res;
-		res = new int*[n];
-		for(int i=0; i<n; i++){
-			res[i] = new int[n];
-		}
+	/*void maxSummary_1(int A[], int n, int& left, int& right, int& max) {
 
-		int a = 0;
-		int b = 0;
-		int max = 0;
+		left = 0;
+		right = 0;
+		max = MINIMUM;
 
+		int sum = 0;
 		for(int i=0; i < n; i++){
-			res[i][i] = A[i];
-			for(int j = i+1; j < n; j++) {
-				res[i][j] = res[i][j-1] + A[j];
-				if(res[i][j] > max){
-					max = res[i][j];
-					a = i;
-					b = j;
+			for(int j = i; j < n; j++) {
+				sum += A[j];
+				if(sum > max){
+					left = i;
+					right = j;
+					max = sum;
 				}
 			}
+			sum = 0;
 		}
 
-		std::cout<<a<<" "<<b<<std::endl;
-		return max;
-    }
+		std::cout<<left<<" "<<right<<std::endl;
+		return;
+    }*/
 
 	//
 	int maxSummary_2(int A[], int n) {
@@ -45,7 +48,7 @@ public:
 	}
 
 private:
-	int maxSumSub(int A[], int n){
+	/*int maxSumSub(int A[], int n){
 		if(n == 1) {
 			return A[0];
 		}
@@ -56,7 +59,24 @@ private:
 				return max(maxSumSub(A, n-1), A[n-1]);
 			}
 		}
-	}
+	}*/
+
+	/*sMax maxSumSub(int A[], sMax info){
+		if(info.left == info.right){
+			info.max = A[info.left];
+			return info;
+		}
+
+		maxinfo left;
+		left.left = info.left;
+		left.right = (info.left + info.right)/2;
+
+		maxinfo right;
+		right.left = (info.left + info.right )/2 + 1;
+		right.right = info.right;
+
+		if()
+	}*/
 };
 
 #endif
