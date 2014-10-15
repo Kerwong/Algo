@@ -2,7 +2,7 @@
 #define _SOLUTION_
 
 #include <iostream>
-#include <Windows.h>
+#include <algorithm>
 
 #define MINIMUM -65536
 
@@ -49,6 +49,45 @@ public:
 		std::cout<<low<<" "<<high<<" "<<max<<std::endl;
 		return 0;
 	}
+
+	// Kadane Algo
+	int maxSummary_3(int A[], int n){
+		int mmax = A[0];
+		int cursum = 0;
+
+		for(int i = 0; i < n; ++i){
+			cursum = cursum < 0 ? A[i] : cursum + A[i];
+			mmax = std::max(cursum, mmax);
+		}
+
+		return mmax;
+	}
+
+	/*int maxSummary_3(int A[], int n){
+		int mmax = MINIMUM;
+		int sum = A[0];
+
+		for(int i=1; i < n; i++){
+			if(sum <= 0){
+				if(A[i] >= 0 ){
+					sum = A[i];
+					mmax = std::max(sum, mmax);
+				} else {
+					sum = std::max(sum, A[i]);
+					mmax = std::max(sum, mmax);
+				}
+			} else {
+				if(A[i] < 0){
+					mmax = std::max(mmax, sum);
+					sum += A[i];
+				} else {
+					sum += A[i];
+					mmax = std::max(mmax, sum);
+				}				
+			}
+		}
+		return mmax;
+	}*/
 
 private:
 
