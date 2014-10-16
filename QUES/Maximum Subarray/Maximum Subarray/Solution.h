@@ -63,21 +63,16 @@ public:
 		return mmax;
 	}
 
-	/*int maxSummary_3(int A[], int n){
-		int mmax = MINIMUM;
+	int maxSummary_3(int A[], int n){
+		int mmax = A[0];
 		int sum = A[0];
 
 		for(int i=1; i < n; i++){
 			if(sum <= 0){
-				if(A[i] >= 0 ){
-					sum = A[i];
-					mmax = std::max(sum, mmax);
-				} else {
-					sum = std::max(sum, A[i]);
-					mmax = std::max(sum, mmax);
-				}
+				sum = A[i];
+				mmax = std::max(sum, mmax);
 			} else {
-				if(A[i] < 0){
+				if(A[i] <= 0){
 					mmax = std::max(mmax, sum);
 					sum += A[i];
 				} else {
@@ -87,7 +82,7 @@ public:
 			}
 		}
 		return mmax;
-	}*/
+	}
 
 private:
 
