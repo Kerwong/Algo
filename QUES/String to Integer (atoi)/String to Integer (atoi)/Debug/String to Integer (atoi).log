@@ -1,0 +1,21 @@
+﻿生成启动时间为 2014/10/23 0:43:33。
+     1>项目“D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\String to Integer (atoi)\String to Integer (atoi).vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\String to Integer (atoi).unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\workspace\github\algo\ques\string to integer (atoi)\string to integer (atoi)\strtointeger.h(55): warning C4146: 一元负运算符应用于无符号类型，结果仍为无符号类型
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\Debug\String to Integer (atoi).exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\String to Integer (atoi).exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\Debug\String to Integer (atoi).pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\Debug\String to Integer (atoi).lib" /MACHINE:X86 Debug\main.obj
+         String to Integer (atoi).vcxproj -> D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\Debug\String to Integer (atoi).exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\Debug\String to Integer (atoi).exe.manifest" /manifest "Debug\String to Integer (atoi).exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“Debug\String to Integer (atoi).unsuccessfulbuild”。
+         正在对“Debug\String to Integer (atoi).lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Workspace\GitHub\Algo\QUES\String to Integer (atoi)\String to Integer (atoi)\String to Integer (atoi).vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.20
