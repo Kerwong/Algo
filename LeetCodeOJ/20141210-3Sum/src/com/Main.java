@@ -6,10 +6,8 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Solution sol = new Solution();
-		
-		String x = sol.intToRoman(2014);
-		
-		System.out.println(x);
+		int[] h = {1,1};
+		sol.maxArea(h);
 	}
 
 }
