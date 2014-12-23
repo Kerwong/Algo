@@ -23,9 +23,6 @@ $RECYCLE.BIN/
 
 # Java Project
 *.class
-*.prefs
-*.classpath
-*.project
 bin/
 
 # =========================
