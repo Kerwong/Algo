@@ -1,4 +1,4 @@
-#Mon Dec 08 20:55:03 CST 2014
+#Tue Dec 09 21:13:47 CST 2014
 sp_cleanup.remove_unnecessary_casts=true
 sp_cleanup.remove_trailing_whitespaces_ignore_empty=false
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -60,6 +60,7 @@ content_assist_number_of_computers=19
 sp_cleanup.always_use_blocks=true
 org.eclipse.jdt.ui.formatterprofiles.version=11
 sp_cleanup.remove_trailing_whitespaces=false
+org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
 sp_cleanup.use_this_for_non_static_method_access_only_if_necessary=true
 sp_cleanup.remove_private_constructors=true
