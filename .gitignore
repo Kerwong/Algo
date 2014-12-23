@@ -24,6 +24,7 @@ $RECYCLE.BIN/
 # Java Project
 *.class
 bin/
+.metadata/
 
 # =========================
 # Operating System Files
