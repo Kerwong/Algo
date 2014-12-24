@@ -19,7 +19,8 @@ $RECYCLE.BIN/
 *.vcxproj
 *.filters
 *.user
-
+Debug/
+Release/
 
 # Java Project
 *.class
