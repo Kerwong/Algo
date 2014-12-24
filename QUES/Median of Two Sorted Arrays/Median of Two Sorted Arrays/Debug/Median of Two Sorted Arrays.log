@@ -1,0 +1,17 @@
+﻿生成启动时间为 2014/11/10 15:12:18。
+     1>项目“D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Median of Two Sorted Arrays\Median of Two Sorted Arrays.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\Median of Two Sorted Arrays.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Median of Two Sorted Arrays.exe.embed.manifest.res" "Debug\Median of Two Sorted Arrays_manifest.rc" 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Debug\Median of Two Sorted Arrays.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Median of Two Sorted Arrays.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Debug\Median of Two Sorted Arrays.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Debug\Median of Two Sorted Arrays.lib" /MACHINE:X86 "Debug\Median of Two Sorted Arrays.exe.embed.manifest.res"
+     1>LINK : error LNK2001: 无法解析的外部符号 _mainCRTStartup
+     1>D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Debug\Median of Two Sorted Arrays.exe : fatal error LNK1120: 1 个无法解析的外部命令
+     1>已完成生成项目“D:\Workspace\GitHub\Algo\QUES\Median of Two Sorted Arrays\Median of Two Sorted Arrays\Median of Two Sorted Arrays.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:12.36
