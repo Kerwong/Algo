@@ -9,7 +9,7 @@ public class Main {
 		
 		int[] num = {3,3,1,3};
 		
-		int x = sol.findMin(num);
+		int x = sol.maxProduct(num);
 	}
 
 }

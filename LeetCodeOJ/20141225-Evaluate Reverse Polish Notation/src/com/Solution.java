@@ -15,7 +15,7 @@ import java.util.Stack;
 
 public class Solution {
 	/** SOLUTION 1 */
-	/*
+	
 	public int evalRPN(String[] tokens) {
 		Stack<Integer> rpnStack = new Stack<>();
 
@@ -29,25 +29,27 @@ public class Solution {
 		}
 		return rpnStack.pop();
 	}
-	*/
+	
+	//==是比较对象的引用地址,equal 才是比较值
 	private void calcRPN(Stack<Integer> rpnStack, String operator) {
 		int param2 = rpnStack.pop();
 		int param1 = rpnStack.pop();
 
-		if (operator == "+") {
+		if (operator.equals("+")) {
 			rpnStack.push(param1 + param2);
-		} else if (operator == "-") {
+		} else if (operator.equals("-")) {
 			rpnStack.push(param1 - param2);
-		} else if (operator == "*") {
+		} else if (operator.equals("*")) {
 			rpnStack.push(param1 * param2);
-		} else if (operator == "/") {
+		} else if (operator.equals("/")) {
 			rpnStack.push(param1 / param2);
 		}
 	}
 
+	/**
 	public int evalRPN(String[] tokens) {
 		int returnValue = 0;
-		String operators = "+-*/";
+		String operators = "+-\*\/";
 		Stack<String> stack = new Stack<String>();
 
 		for (String t : tokens) {
@@ -76,4 +78,5 @@ public class Solution {
 		returnValue = Integer.valueOf(stack.pop());
 		return returnValue;
 	}
+	*/
 }
