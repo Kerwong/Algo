@@ -1,43 +1,62 @@
 package com;
 
 /**
- * Reverse digits of an integer.
+ * Implement regular expression matching with support for '.' and '*'.
  * 
- * Example1: x = 123, retStrurn 321
- * Example2: x = -123, retStrurn -321
+ * '.' Matches any single character.
+ * '*' Matches zero or more of the preceding element.
+ * 
+ * The matching should cover the entire input string (not partial).
+ * 
+ * The function prototype should be:
+ * 
+ * bool isMatch(const char *s, const char *p)
+ * Some examples:
+ * isMatch("aa","a") → false
+ * isMatch("aa","aa") → true
+ * isMatch("aaa","aa") → false
+ * isMatch("aa", "a*") → true
+ * isMatch("aa", ".*") → true
+ * isMatch("ab", ".*") → true
+ * isMatch("aab", "c*a*b") → true
  * */
 
-/**
- * WARNING:注意逆序后范围越界的问题
- * */
 public class Solution {
-	
-	public int reverse(int x) {
-		String retStr = "";
-		
-		if (x < 0) {
-			retStr = "-";
-			x = 0 - x;
+	/** SOLUTION 1: FAILED
+	 * 题目理解错误，理解成了 包含，实际应该是 完全匹配*/
+	public boolean isMatch(String s, String p) {
+		if (p.length() == 0) {
+			return true;
 		}
 		
-		int remainder = 0;
-		int quotient = x;
-		
-		while (quotient != 0) {
-			remainder = quotient % 10;
-			quotient = quotient / 10;
-			retStr = retStr + remainder;
+        String[] strs = p.split("\\*");
+        String newP = "";
+        
+        for (int i = 0; i < strs.length; i++) {
+        	if (strs[i].charAt(strs[i].length()-1) == '*') {
+        		newP += strs[i].substring(0, strs[i].length()-2);
+			}
+        	newP += strs[i];
 		}
-		
-		int ret = 0;
-		
-		try {
-			ret = Integer.valueOf(retStr);
-		} catch (Exception e) {
-			return 0;
-		}		
-		
-		return ret;
+        
+        for (int i = 0; i < s.length(); i++) {
+        	int j = 0;
+			for (; j < newP.length(); j++) {
+				if (newP.charAt(j) != '.') {
+					if (i+j >= s.length()) {
+						break;
+					}
+					if (newP.charAt(j) == s.charAt(i+j)) {
+						continue;
+					} else {
+						break;
+					}
+				}
+			}
+			if (j == newP.length()) {
+				return true;
+			}			
+		}
+        return false;
     }
-	
 }

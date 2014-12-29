@@ -7,7 +7,7 @@ public class Main {
 
 		Solution sol = new Solution();
 		
-		int x = sol.reverse(-123);
+		boolean x = sol.isMatch("a", "");
 		
 		System.out.println(x);
 	}

@@ -12,33 +12,29 @@ import java.util.HashSet;
  * */
 
 public class Solution {
+	//wlrbbmqbhcdarzowkkyhiddqscdxrjmowfrxsjybldbefsarcbynecdyggxxpklorellnmpapqfwkhopkmco
 	public int lengthOfLongestSubstring(String s) {
 		
 		HashMap<Character, Integer> hMap = new HashMap<Character, Integer>();
 		
-		int index = -1;
+		int prevIndex = -1;
 		int maxLen = 0;
+		int curLen = 0;
 		
 		for (int i = 0; i < s.length(); i++) {
 			Character ch = s.charAt(i);
 			if (!hMap.containsKey(ch)) {
 				hMap.put(ch, i);
-				maxLen++;
+				curLen++;
 			} else {
-				int tmp = hMap.get(ch);
-				if(i - tmp > maxLen) {
-					if (tmp > index) {
-						index = tmp;
-						maxLen = i - tmp;
-					}
-				}
-				
-				if (tmp > index) {
-					index = tmp;
-				}
+				int tmpIndex = hMap.get(ch);				
+				if (tmpIndex > prevIndex) {
+					prevIndex = tmpIndex;					
+				}				
 				hMap.put(ch, i);
-			}
+			}			
+			maxLen = Math.max(maxLen, i - prevIndex);
 		}
-        return 0;
+        return maxLen;
     }
 }

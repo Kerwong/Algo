@@ -1,6 +1,7 @@
 package com;
 
-import java.util.HashMap;
+import java.util.Vector;
+
 
 /**
 * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number 
@@ -20,6 +21,37 @@ import java.util.HashMap;
 
 public class Solution {
 	public String convert(String s, int nRows) {
-        return null;
+		if (nRows == 1) {
+			return s;
+		}
+		
+		int div = nRows * 2 - 2;
+		
+		String[] strings = new String[nRows];
+		for (int i = 0; i < strings.length; i++) {
+			strings[i] = "";
+		}
+		
+		for (int i = 0; i < s.length(); i++) {
+			int mod = i % div;
+			if (mod == 0) {
+				strings[0] += s.charAt(i);
+			} else if (mod == nRows - 1) {
+				strings[nRows-1] += s.charAt(i);
+			} else {
+				if (mod > nRows - 1) {
+					mod = div - mod;
+				}
+				strings[mod] += s.charAt(i);
+			}			
+		}
+		
+		String ret = "";
+		for (int i = 0; i < strings.length; i++) {
+			ret += strings[i];
+		}
+        return ret;
     }
+	
+	
 }
