@@ -6,8 +6,8 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Solution sol = new Solution();
-		int[] num = {-1,0,1};
-		sol.threeSum(num);
+		int[] num = {1,0,-1,0,-2,2};
+		sol.fourSum(num, 0);
 	}
 
 }

@@ -6,8 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Solution sol = new Solution();
-		int[] num = {-1,0,1};
-		sol.threeSum(num);
+		sol.letterCombinations("23");
 	}
 
 }
