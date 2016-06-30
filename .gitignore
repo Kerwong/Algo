@@ -27,6 +27,8 @@ $RECYCLE.BIN/
 *.classpath
 *.project
 bin/
+.idea/
+*.iml
 
 # =========================
 # Operating System Files
