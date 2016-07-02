@@ -19,16 +19,18 @@ $RECYCLE.BIN/
 *.vcxproj
 *.filters
 *.user
-
+Debug/
+Release/
 
 # Java Project
 *.class
-*.prefs
-*.classpath
-*.project
 bin/
+<<<<<<< HEAD
 .idea/
 *.iml
+=======
+.metadata/
+>>>>>>> e1399ba624a5f4aa14b7747071c66c1c63cbd7d0
 
 # =========================
 # Operating System Files
